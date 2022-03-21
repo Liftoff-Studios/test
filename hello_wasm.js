@@ -121,13 +121,13 @@ async function init(input) {
         alert(getStringFromWasm0(arg0, arg1));
     };
 
-    if (typeof input === 'string' || (typeof Request === 'function' && input instanceof Request) || (typeof URL === 'function' && input instanceof URL)) {
-        input = fetch(input);
-    }
+    //if (typeof input === 'string' || (typeof Request === 'function' && input instanceof Request) || (typeof URL === 'function' && input instanceof URL)) {
+     //   input = fetch(input);
+    //}
 
 
 
-    const { instance, module } = await load(await input, imports);
+    const { instance, module } = await load(input, imports);
 
     wasm = instance.exports;
     init.__wbindgen_wasm_module = module;
