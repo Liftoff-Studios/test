@@ -121,9 +121,9 @@ async function init(input) {
         alert(getStringFromWasm0(arg0, arg1));
     };
 
-    //if (typeof input === 'string' || (typeof Request === 'function' && input instanceof Request) || (typeof URL === 'function' && input instanceof URL)) {
-     //   input = fetch(input);
-    //}
+    if (typeof input === 'string' || (typeof Request === 'function' && input instanceof Request) || (typeof URL === 'function' && input instanceof URL)) {
+       input = fetch(input);
+    }
 
 
 
